@@ -1,0 +1,41 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MikuMikuVLC"
+        xmlns:Wpf="clr-namespace:Vlc.DotNet.Wpf;assembly=Vlc.DotNet.Wpf" x:Class="MikuMikuVLC.MainWindow"
+        mc:Ignorable="d"
+        Title="MikuMikuVLC" Height="350" Width="286.765" MouseDown="Window_MouseDown" DragEnter="Window_DragEnter" Drop="Window_Drop" MouseEnter="Window_MouseEnter" MouseLeave="Window_MouseLeave">
+    <Window.Resources>
+        <local:ValueToProcessConverter x:Key="ValueToProcessConverter"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/BG1.png" Stretch="Uniform"></ImageBrush>
+    </Window.Background>
+    <Grid Margin="0,0,2,0">
+        <Grid Name="g2" HorizontalAlignment="Left" Height="53" Margin="12,199,0,0" VerticalAlignment="Top" Width="53">
+            <ProgressBar x:Name="pbBar"  Minimum="0"
+                     Maximum="100"
+                     Value="{Binding SuccessRate, Mode=OneWay}" IsEnabled="False" Margin="-1,0,1,0">
+                <ProgressBar.Template>
+                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                        <Border Background="{TemplateBinding Value, ConverterParameter=200, Converter={StaticResource ValueToProcessConverter}}"/>
+                    </ControlTemplate>
+                </ProgressBar.Template>
+            </ProgressBar>
+        </Grid>
+        <Image x:Name="Close" HorizontalAlignment="Left" Height="40" Margin="163,35,0,0" VerticalAlignment="Top" Width="40" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Close_MouseDown"/>
+        <Image x:Name="Question" HorizontalAlignment="Left" Height="32" Margin="131,43,0,0" VerticalAlignment="Top" Width="32" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Question_MouseDown"/>
+        <Image x:Name="PlayPause" HorizontalAlignment="Left" Height="50" Margin="13,200,0,0" VerticalAlignment="Top" Width="50" MouseEnter="PlayPause_MouseEnter" MouseLeave="PlayPause_MouseLeave" MouseDown="PlayPause_MouseDown" MouseMove="Controls_MouseMove"/>
+        <Image x:Name="Stop" HorizontalAlignment="Left" Height="40" Margin="68,210,0,0" VerticalAlignment="Top" Width="40" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Stop_MouseDown"/>
+        <Image x:Name="Previous" HorizontalAlignment="Left" Height="40" Margin="108,210,0,0" VerticalAlignment="Top" Width="40" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Previous_MouseDown"/>
+        <Image x:Name="Next" HorizontalAlignment="Left" Height="40" Margin="148,210,0,0" VerticalAlignment="Top" Width="40" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Next_MouseDown"/>
+        <Image x:Name="OpenPlayerWindow" HorizontalAlignment="Left" Height="32" Margin="131,250,0,0" VerticalAlignment="Top" Width="32" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="OpenPlayerWindow_MouseDown"/>
+        <Image x:Name="OpenMusicLs" HorizontalAlignment="Left" Height="32" Margin="163,250,0,0" VerticalAlignment="Top" Width="32" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="OpenMusicLs_MouseDown"/>
+        <Image x:Name="setting" HorizontalAlignment="Left" Height="32" Margin="99,43,0,0" VerticalAlignment="Top" Width="32" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="setting_MouseDown"/>
+        <Image x:Name="vol10" HorizontalAlignment="Left" Height="32" Margin="200,250,0,0" VerticalAlignment="Top" Width="64" MouseWheel="vol10_MouseWheel"/>
+        <Image x:Name="Re" HorizontalAlignment="Left" Height="32" Margin="52,250,0,0" VerticalAlignment="Top" Width="32" MouseEnter="Re_MouseEnter" MouseLeave="Re_MouseLeave" MouseDown="Re_MouseDown"/>
+        <Label x:Name="marqueeLable" Content="MikuMikuVLC" HorizontalAlignment="Left" Margin="13,167,0,0" VerticalAlignment="Top" FontSize="14" MouseEnter="marqueeLable_MouseEnter" MouseLeave="marqueeLable_MouseLeave"/>
+    </Grid>
+</Window>
