@@ -117,7 +117,8 @@ namespace MikuMikuVLC
 
         private void LoadList_MouseDown(object sender, MouseButtonEventArgs e)///載入SmaMu
         {
-            pL.PQ.Clear();
+            ///.NET BUG
+            /*pL.PQ.Clear();
             listBox.Items.Clear();
             pL.currentIndex = 0;
 
@@ -147,7 +148,7 @@ namespace MikuMikuVLC
                     fileStream.Close();
                 }
                 MainWindow.vlcPlayer.vlcControl1.VlcMediaPlayer.SetMedia(new FileInfo(pL.PQ.ElementAt(pL.currentIndex).Value));
-            }
+            }*/
         }
 
         private void SaveList_MouseDown(object sender, MouseButtonEventArgs e)///輸出SmaMu
