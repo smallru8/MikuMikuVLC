@@ -25,7 +25,7 @@ namespace MikuMikuVLC
     public partial class MainWindow : Window, INotifyPropertyChanged
     {
 
-        public static string ver = "Beta-1901.1";
+        public static string ver = "Beta-1902.1";
 
         public System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Timer Playtimer;

@@ -27,7 +27,7 @@ namespace MikuMikuVLC
             vlcControl1.BackColor = System.Drawing.Color.Black;
             vlcControl1.Location = new System.Drawing.Point(12, 12);
             vlcControl1.Name = "vlcControl1";
-            vlcControl1.Size = new System.Drawing.Size(634, 347);
+            vlcControl1.Size = new System.Drawing.Size(this.Size.Width-25, this.Size.Height-25);
             vlcControl1.Spu = -1;
             vlcControl1.TabIndex = 0;
             vlcControl1.Text = "vlcControl1";
@@ -46,6 +46,7 @@ namespace MikuMikuVLC
             vlcControl1.VlcMediaPlayer.EndReached += vlcEndReached;
             //vlcControl1.PositionChanged += VlcPositionChanged;
             vlcControl1.BackColor = System.Drawing.Color.Black;
+            vlcControl1.KeyDown += vlcKeyDown;
             vlcControl1.EndInit();
 
             //FileInfo fi = new FileInfo("H:\\mp3\\歌單\\relax\\【 3D環繞】請戴上耳機，感受聽覺的震撼 - YouTube (480p).mp4");
@@ -54,6 +55,17 @@ namespace MikuMikuVLC
             vlcControl1.VlcMediaPlayer.Audio.Volume = 10;
             vlcControl1.VlcMediaPlayer.Position = 0.5f;
             vlcControl1.VlcMediaPlayer.Audio.Volume = 50;
+        }
+       
+        private void vlcKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)//切回小視窗
+            { 
+                WindowState = FormWindowState.Normal;
+                vlcControl1.SendToBack();
+                vlcControl1.Location = new System.Drawing.Point(12, 12);
+                vlcControl1.Size = new System.Drawing.Size(this.Size.Width - 25, this.Size.Height - 25);
+            }
         }
 
         private void vlcEndReached(object sender, EventArgs e)
@@ -119,9 +131,12 @@ namespace MikuMikuVLC
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)///全螢幕
         {
-            
+            WindowState = FormWindowState.Maximized;
+            vlcControl1.BringToFront();
+            vlcControl1.Location = new System.Drawing.Point(0, 0);
+            vlcControl1.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
         }
     }
 }

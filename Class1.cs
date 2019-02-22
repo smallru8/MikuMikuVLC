@@ -213,7 +213,7 @@ namespace MikuMikuVLC
             margin.Top = coordinate[image.Name][1];
             image.Margin = margin;
         }
-        public void setUpUI(MainWindow mw)
+        public void setUpUI(MainWindow mw)//設定skin
         {      
             bg1 = new ImageBrush();
             bg1.ImageSource = skins["BG1.png"];
@@ -276,8 +276,8 @@ namespace MikuMikuVLC
             MainWindow.plw.Close.Source = skins["Close.png"];
             MainWindow.plw.Close.Stretch = Stretch.Uniform;
 
-            MainWindow.plw.LoadList.Source = skins["LoadList.png"];
-            MainWindow.plw.LoadList.Stretch = Stretch.Uniform;
+            //MainWindow.plw.LoadList.Source = skins["LoadList.png"];
+            //MainWindow.plw.LoadList.Stretch = Stretch.Uniform;
 
             MainWindow.plw.SaveList.Source = skins["SaveList.png"];
             MainWindow.plw.SaveList.Stretch = Stretch.Uniform;

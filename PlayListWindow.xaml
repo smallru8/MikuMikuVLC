@@ -11,8 +11,7 @@
     </Window.Background>
     <Grid Margin="0,0,267,0">
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="278" Margin="32,31,-231,0" VerticalAlignment="Top" Width="199" Background="{x:Null}" DragEnter="listBox_DragEnter" Drop="listBox_Drop" MouseDoubleClick="listBox_MouseDoubleClick" KeyDown="listBox_KeyDown"/>
-        <Image x:Name="LoadList" HorizontalAlignment="Left" Height="20" Margin="32,314,-129,0" VerticalAlignment="Top" Width="97" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="LoadList_MouseDown"/>
-        <Image x:Name="SaveList" HorizontalAlignment="Left" Height="20" Margin="144,314,-241,0" VerticalAlignment="Top" Width="97" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="SaveList_MouseDown"/>
+        <Image x:Name="SaveList" HorizontalAlignment="Left" Height="20" Margin="132,314,-229,0" VerticalAlignment="Top" Width="97" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="SaveList_MouseDown"/>
         <Image x:Name="Close" HorizontalAlignment="Left" Height="32" Margin="220,9,-252,0" VerticalAlignment="Top" Width="32" MouseEnter="BtnMouseEnter" MouseLeave="BtnMouseLeave" MouseDown="Close_MouseDown"/>
 
     </Grid>

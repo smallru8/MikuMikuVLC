@@ -17,7 +17,7 @@
         <Label x:Name="label_Copy2" Content="新增置頂、半透明模式" HorizontalAlignment="Left" Height="32" Margin="34,138,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
         <Label x:Name="label_Copy3" Content="skinPack不用壓縮" HorizontalAlignment="Left" Height="32" Margin="34,170,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
         <Label x:Name="label_Copy4" Content="可播放4K影片" HorizontalAlignment="Left" Height="32" Margin="34,202,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
-        <Label x:Name="label_Copy5" Content="全螢幕的部分還沒做" HorizontalAlignment="Left" Height="32" Margin="34,234,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
+        <Label x:Name="label_Copy5" Content="" HorizontalAlignment="Left" Height="32" Margin="34,234,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
         <Label x:Name="label_Copy6" Content="更多說明請至Github" HorizontalAlignment="Left" Height="32" Margin="34,266,0,0" VerticalAlignment="Top" Width="215" FontSize="16"/>
         <Label x:Name="label_Copy8" Content="GitHub Link :" HorizontalAlignment="Left" Height="32" Margin="34,314,0,0" VerticalAlignment="Top" Width="111" FontSize="16"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="63" Margin="145,303,0,0" VerticalAlignment="Top" Width="63" MouseDown="image_MouseDown"/>

@@ -58,7 +58,7 @@ namespace MikuMikuVLC
         }
 
         /// <summary>
-        /// 根据角度获取坐标
+        /// 根據角度取得座標
         /// </summary>
         /// <param name="CenterPoint"></param>
         /// <param name="r"></param>
@@ -74,7 +74,7 @@ namespace MikuMikuVLC
         }
 
         /// <summary>
-        /// 根据4个坐标画出扇形
+        /// 畫出扇形
         /// </summary>
         /// <param name="bigFirstPoint"></param>
         /// <param name="bigSecondPoint"></param>
@@ -112,7 +112,7 @@ namespace MikuMikuVLC
         }
 
         /// <summary>
-        /// 根据当前值和最大值获取扇形
+        /// 
         /// </summary>
         /// <param name="value"></param>
         /// <param name="maxValue"></param>
@@ -175,7 +175,7 @@ namespace MikuMikuVLC
         }
 
         /// <summary>
-        /// 根据当前值和最大值画出进度条
+        /// 
         /// </summary>
         /// <param name="value"></param>
         /// <param name="maxValue"></param>
@@ -191,7 +191,7 @@ namespace MikuMikuVLC
         }
 
         /// <summary>
-        /// 根据当前值和最大值画出进度条
+        /// 
         /// </summary>
         /// <param name="value"></param>
         /// <param name="maxValue"></param>

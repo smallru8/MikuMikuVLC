@@ -118,6 +118,7 @@ namespace MikuMikuVLC
         private void LoadList_MouseDown(object sender, MouseButtonEventArgs e)///載入SmaMu
         {
             ///.NET BUG
+			///暫時移除此功能
             /*pL.PQ.Clear();
             listBox.Items.Clear();
             pL.currentIndex = 0;
